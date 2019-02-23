@@ -23,5 +23,5 @@ Route::post('register', 'PassportController@register');
 Route::middleware('auth:api')->group(function () {
     Route::get('user', 'PassportController@details');
  
-    Route::resource('products', 'ProductController');
+    Route::resource('products', 'ProductController')->middleware('cors');
 });
